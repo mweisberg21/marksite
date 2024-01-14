@@ -4,20 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Mark's Portfolio</title>
 </head>
     <body>
+        <div class="header-section">
         <h1>Hello! Welcome to my Portfolio 👋 </h1>
         <h2>I am so not happy that you're here!</h2>
         <p>You're here viewing this website because I told you to. Joke is on you I guess. Anyway enjoy it. 🤡</p>
+        <label class="toggle-switch">
+            <input type="checkbox" id="myToggle" checked>
+            <span class="slider"></span>
+          </label>
+          
+                  
+              
+    </div>
         <hr>
         <h3>Portfolio Directory:</h3>
             <ul>
                 <li>😅<a href="./public/about.html">About Me</a></li>
-                <li>❌<a href="./public/contact.html"> Contact Me</a> ...Please don't.</li>
+                <li>❌<a href="./public/contact.html">Contact Me</a> ...Please don't.</li>
                 <li>😂<a href="./public/portfolio.html">View Example Work</a></li>
             </ul>
         <hr>
+        <div class="joke-box">
         <h3>Enjoy Some Bad Jokes</h3>
             <ol>
                 <li>Why don't eggs tell jokes? Because they might crack up!</li>
@@ -26,14 +37,34 @@
                 <li>What do you call a belt made of watches? A waist of time!</li>
             </ol>
         <i>Jokes were written with AI.</i>
+    </div>
         <hr>
         <h3>Here's a picture of a dog. Just because. 🐕‍🦺</h3>
         <img src="./assets/images/angry coding dog.webp" alt="dog is pissed" width="400">
     <footer>
       <hr>
 
-        <p>© 2024 Mark's Website | <a href="./public/contact.html">Contact Me</a> <i>Again... don't! ❌ </i></p>
+        <p>© 2024 Mark's Website | <a href="./public/contact.html">Contact Me</a> <i>Again... don't! ❌ </i></p> 
+        <hr>
     </footer>
+    
+    <script>
+        document.getElementById('myToggle').addEventListener('change', function() {
+            var contentArea = document.getElementById('contentArea');
+            
+            if(this.checked) {
+                contentArea.classList.remove('disabled');
+                contentArea.classList.add('enabled');
+                // Perform any additional actions when the toggle is turned on
+            } else {
+                contentArea.classList.remove('enabled');
+                contentArea.classList.add('disabled');
+                // Perform any additional actions when the toggle is turned off
+            }
+        });
+    </script>
+    
+</body>
 
 
 
