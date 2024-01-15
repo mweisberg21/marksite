@@ -353,4 +353,17 @@
      font-weight: bolder;
  }
 
- img.mark-image {width: 200px!important;}
+ div.about-container {display: flex;
+    align-items: center; /* Aligns the image and text vertically */
+}
+
+div.about-container>.mark-image {
+    width: 200px; /* Adjust as needed */
+    height: auto; /* Maintains aspect ratio */
+    margin-right: 20px; /* Space between image and text */
+    align-items: top;
+}
+
+div.about-container>.text {
+    text-align: left; /* Adjust the alignment of text within the paragraph */
+}
