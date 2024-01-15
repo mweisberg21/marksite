@@ -1,322 +1,354 @@
  /* The switch - the box around the slider */
-.toggle-switch {
-    position: relative;
-    display: inline-block;
-    width: 120px; /* Width of the outer box */
-    height: 34px; /* Height of the outer box */
-    margin: 10px;
-    background-color: #2196F3; /* Start with blue background */
-    border-radius: 34px; /* Rounded borders for the slider */
-    transition: background-color .4s;
-    overflow: hidden; /* Prevent content from spilling out */
-  }
-  
-  /* Hide default HTML checkbox */
-  .toggle-switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  /* The slider - visual representation of the toggle */
-  .toggle-switch .slider {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: inherit; /* Use the background of the parent */
-    transition: .4s;
-    display: flex;
-    align-items: center; /* Vertically center the slider content */
-    justify-content: end; /* Position the content at the end (right side) */
-    padding-right: 34px; /* Padding for the circle */
-  }
-  
-  /* The circle inside the slider */
-  .toggle-switch .slider::before {
-    content: "";
-    position: absolute;
-    height: 26px;
-    width: 26px;
-    right: 4px; /* Positioned to the right */
-    bottom: 4px;
-    background-color: white;
-    transition: all .4s;
-    border-radius: 50%;
-  }
-  
-  /* Label text for the toggle */
-  .toggle-switch .slider::after {
-    content: "CSS";
-    color: white; /* Text color for ON state */
-    position: absolute;
-    width: calc(100% - 60px); /* Subtract the width of the circle and some padding */
-    left: 30px; /* Center the text taking the circle into account */
-    bottom: 0;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: color 0.4s;
-  }
-  
-  /* Change the slider's background color to light gray and move the circle to the left when unchecked */
-  .toggle-switch input:not(:checked) + .slider {
-    background-color: #ccc; /* Light gray background for OFF state */
-    justify-content: start; /* Move content to the left */
-    padding-left: 34px; /* Make room for the circle on the left */
-    padding-right: 0; /* Reset right padding */
-  }
-  
-  .toggle-switch input:not(:checked) + .slider::before {
-    transform: translateX(-86px); /* Move the circle to the left */
-  }
-  
-  /* Change text color to blueviolet when unchecked to indicate inactive state */
-  .toggle-switch input:not(:checked) + .slider::after {
-    color: blueviolet;
-  }
-  
+ .toggle-switch {
+     position: relative;
+     display: inline-block;
+     width: 120px;
+     /* Width of the outer box */
+     height: 34px;
+     /* Height of the outer box */
+     margin: 10px;
+     background-color: #2196F3;
+     /* Start with blue background */
+     border-radius: 34px;
+     /* Rounded borders for the slider */
+     transition: background-color .4s;
+     overflow: hidden;
+     /* Prevent content from spilling out */
+ }
 
-/* Reset some basic elements */
-body,
-h1,
-h2,
-h3,
-p,
-ul,
-ol,
-li,
-footer {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+ /* Hide default HTML checkbox */
+ .toggle-switch input {
+     opacity: 0;
+     width: 0;
+     height: 0;
+ }
 
-/* Apply a basic font */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-    padding: 20px;
-}
+ /* The slider - visual representation of the toggle */
+ .toggle-switch .slider {
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     background-color: inherit;
+     /* Use the background of the parent */
+     transition: .4s;
+     display: flex;
+     align-items: center;
+     /* Vertically center the slider content */
+     justify-content: end;
+     /* Position the content at the end (right side) */
+     padding-right: 34px;
+     /* Padding for the circle */
+ }
 
-/* Container for content */
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
+ /* The circle inside the slider */
+ .toggle-switch .slider::before {
+     content: "";
+     position: absolute;
+     height: 26px;
+     width: 26px;
+     right: 4px;
+     /* Positioned to the right */
+     bottom: 4px;
+     background-color: white;
+     transition: all .4s;
+     border-radius: 50%;
+ }
 
-/* Header Styles */
-h1,
-h2,
-h3 {
-    color: #333;
-}
+ /* Label text for the toggle */
+ .toggle-switch .slider::after {
+     content: "CSS";
+     color: white;
+     /* Text color for ON state */
+     position: absolute;
+     width: calc(100% - 60px);
+     /* Subtract the width of the circle and some padding */
+     left: 30px;
+     /* Center the text taking the circle into account */
+     bottom: 0;
+     top: 0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: color 0.4s;
+ }
 
-h1 {
-    margin-bottom: 20px;
-}
+ /* Change the slider's background color to light gray and move the circle to the left when unchecked */
+ .toggle-switch input:not(:checked)+.slider {
+     background-color: #ccc;
+     /* Light gray background for OFF state */
+     justify-content: start;
+     /* Move content to the left */
+     padding-left: 34px;
+     /* Make room for the circle on the left */
+     padding-right: 0;
+     /* Reset right padding */
+ }
 
-h2,
-h3 {
-    margin-bottom: 10px;
-}
+ .toggle-switch input:not(:checked)+.slider::before {
+     transform: translateX(-86px);
+     /* Move the circle to the left */
+ }
 
-/* Paragraph Styles */
-p {
-    margin-bottom: 10px;
-}
+ /* Change text color to blueviolet when unchecked to indicate inactive state */
+ .toggle-switch input:not(:checked)+.slider::after {
+     color: blueviolet;
+ }
 
-/* List Styles */
-ul,
-ol {
-    margin-bottom: 20px;
-}
 
-li {
-    margin-bottom: 5px;
-}
+ /* Reset some basic elements */
+ body,
+ h1,
+ h2,
+ h3,
+ p,
+ ul,
+ ol,
+ li,
+ footer {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
 
-/* Image Styles */
-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 20px;
-    border-radius: 6px;
-}
+ /* Apply a basic font */
+ body {
+     font-family: 'Arial', sans-serif;
+     line-height: 1.6;
+     color: #333;
+     background-color: #f4f4f4;
+     padding: 20px;
+ }
 
-/* Horizontal Rule Styles */
-hr {
-    border: 0;
-    height: 1px;
-    background: #333;
-    margin-bottom: 20px;
-}
+ /* Container for content */
+ .container {
+     width: 80%;
+     margin: auto;
+     overflow: hidden;
+ }
 
-/* Footer Styles */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    width: 100%;
-    background-color: rgb(148, 64, 226);
-    color: #fff;
-    border-radius: 6px;
-}
+ /* Header Styles */
+ h1,
+ h2,
+ h3 {
+     color: #333;
+ }
 
-footer a {
-    color: white;
-}
+ h1 {
+     margin-bottom: 20px;
+ }
 
-footer hr {background-color: white !important;
-height: 3px;}
+ h2,
+ h3 {
+     margin-bottom: 10px;
+ }
 
-/* Media Queries for Responsive Design */
-@media screen and (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-}
+ /* Paragraph Styles */
+ p {
+     margin-bottom: 10px;
+ }
 
-@media screen and (max-width: 480px) {
-    h1 {
-        font-size: 24px;
-    }
+ /* List Styles */
+ ul,
+ ol {
+     margin-bottom: 20px;
+ }
 
-    h2 {
-        font-size: 20px;
-    }
+ li {
+     margin-bottom: 5px;
+ }
 
-    h3 {
-        font-size: 18px;
-    }
-}
+ /* Image Styles */
+ img {
+     width: 100%;
+     height: auto;
+     display: block;
+     margin-bottom: 20px;
+     border-radius: 6px;
+ }
 
-/* Responsive grid layout */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
-}
+ /* Horizontal Rule Styles */
+ hr {
+     border: 0;
+     height: 1px;
+     background: #333;
+     margin-bottom: 20px;
+ }
 
-/* Button Styles */
-.button {
-    display: inline-block;
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
+ /* Footer Styles */
+ footer {
+     text-align: center;
+     padding: 20px 0;
+     width: 100%;
+     background-color: rgb(148, 64, 226);
+     color: #fff;
+     border-radius: 6px;
+ }
 
-.button:hover {
-    background: #555;
-}
+ footer a {
+     color: white;
+ }
 
-/* Navigation Styles */
-.navbar {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
+ footer hr {
+     background-color: white !important;
+     height: 3px;
+ }
 
-.navbar a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    display: inline-block;
-}
+ /* Media Queries for Responsive Design */
+ @media screen and (max-width: 768px) {
+     .container {
+         width: 90%;
+     }
+ }
 
-.navbar a:hover {
-    background: #555;
-}
+ @media screen and (max-width: 480px) {
+     h1 {
+         font-size: 24px;
+     }
 
-/* Form Styles */
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
+     h2 {
+         font-size: 20px;
+     }
 
-input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background: #333;
-    color: white;
-}
+     h3 {
+         font-size: 18px;
+     }
+ }
 
-input[type="submit"]:hover {
-    background: #555;
-}
+ /* Responsive grid layout */
+ .grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     grid-gap: 20px;
+ }
 
-/* Utility Classes */
-.text-center {
-    text-align: center;
-}
+ /* Button Styles */
+ .button {
+     display: inline-block;
+     background: #333;
+     color: #fff;
+     padding: 10px 20px;
+     text-decoration: none;
+     border-radius: 5px;
+     transition: background-color 0.3s;
+ }
 
-.margin-top {
-    margin-top: 20px;
-}
+ .button:hover {
+     background: #555;
+ }
 
-/* Responsive Images */
-img {
-    max-width: 100%;
-    height: auto;
-}
+ /* Navigation Styles */
+ .navbar {
+     background: #333;
+     color: #fff;
+     padding: 10px 0;
+     text-align: center;
+ }
 
-/* Ensure elements take full width on smaller screens */
-@media screen and (max-width: 600px) {
+ .navbar a {
+     color: #fff;
+     text-decoration: none;
+     padding: 10px 20px;
+     display: inline-block;
+ }
 
-    .container,
-    .grid {
-        width: 100%;
-        padding: 0;
-    }
-}
+ .navbar a:hover {
+     background: #555;
+ }
 
-a {
-    color: blueviolet;
-    font-weight: bold;
-}
+ /* Form Styles */
+ input[type="text"],
+ input[type="email"],
+ textarea {
+     width: 100%;
+     padding: 10px;
+     margin-bottom: 10px;
+     border-radius: 5px;
+     border: 1px solid #ddd;
+ }
 
-div.header-section {
-    background-color: rgb(148, 64, 226);
-    padding: 10px;
-    width: 100% 0;
-    text-align: center;
-    color: white;
-    border-radius: 6px;
+ input[type="submit"] {
+     width: 100%;
+     padding: 10px;
+     border: none;
+     border-radius: 5px;
+     background: #333;
+     color: white;
+ }
 
-}
+ input[type="submit"]:hover {
+     background: #555;
+ }
 
-div.header-section h1,
-h2 {
-    color: white;
-}
+ /* Utility Classes */
+ .text-center {
+     text-align: center;
+ }
 
-div.joke-box {
-    text-align: center;
-    border-radius: 6px;
-    border-width: 2px;
-    border: solid lightgray;
-    padding: 10px;
-    margin: 80px;
+ .margin-top {
+     margin-top: 20px;
+ }
 
-}
-div.joke-box ol{text-align: left!important;
-}
+ /* Responsive Images */
+ img {
+     max-width: 100%;
+     height: auto;
+ }
 
-div.joke-box h3 {color: blueviolet;
-font-weight: bolder;}
+ /* Ensure elements take full width on smaller screens */
+ @media screen and (max-width: 600px) {
+
+     .container,
+     .grid {
+         width: 100%;
+         padding: 0;
+     }
+ }
+
+ a {
+     color: blueviolet;
+     font-weight: bold;
+ }
+
+ div.header-section {
+     background: hsla(215, 100%, 50%, 1);
+
+     background: linear-gradient(90deg, hsla(215, 100%, 50%, 1) 0%, hsla(238, 80%, 71%, 1) 100%);
+
+     background: -moz-linear-gradient(90deg, hsla(215, 100%, 50%, 1) 0%, hsla(238, 80%, 71%, 1) 100%);
+
+     background: -webkit-linear-gradient(90deg, hsla(215, 100%, 50%, 1) 0%, hsla(238, 80%, 71%, 1) 100%);
+
+     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#026AFF", endColorstr="#787CF0", GradientType=1);
+     padding: 10px;
+     width: 100% 0;
+     text-align: center;
+     color: white;
+     border-radius: 6px;
+
+ }
+
+ div.header-section h1,
+ h2 {
+     color: white;
+ }
+
+ div.joke-box {
+     text-align: center;
+     border-radius: 6px;
+     border-width: 2px;
+     border: solid lightgray;
+     padding: 10px;
+     margin: 80px;
+
+ }
+
+ div.joke-box ol {
+     text-align: left !important;
+ }
+
+ div.joke-box h3 {
+     color: blueviolet;
+     font-weight: bolder;
+ }
