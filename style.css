@@ -105,8 +105,7 @@
  p,
  ul,
  ol,
- li,
- footer {
+ li {
      margin: 0;
      padding: 0;
      box-sizing: border-box;
@@ -183,11 +182,15 @@
  /* Footer Styles */
  footer {
      text-align: center;
-     padding: 20px 0;
+     padding: 20px;
      width: 100%;
-     background-color: rgb(148, 64, 226);
+     background-color: black;
      color: #fff;
-     border-radius: 6px;
+     margin: 0px;
+     margin-top: 10px;
+     position: absolute;
+     right: 0;
+
  }
 
  footer a {
@@ -329,13 +332,18 @@
      width: 100% 0;
      text-align: center;
      color: white;
-     border-radius: 6px;
+     margin: -20px;
 
  }
 
  div.header-section h1,
  h2 {
      color: white;
+ }
+
+ .directory {
+position: relative;
+     top: 20px;
  }
 
  div.joke-box {
@@ -397,5 +405,5 @@
      border-radius: 6px;
      margin: 2px;
      padding: 10px;
-     
+
  }
